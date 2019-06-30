@@ -11,7 +11,7 @@ live2d_settings['modelTexturesId']      = 53;           // 默认材质 ID，可
 // 工具栏设置
 live2d_settings['showToolMenu']         = true;         // 显示 工具栏          ，可选 true(真), false(假)
 live2d_settings['canCloseLive2d']       = true;         // 显示 关闭看板娘  按钮，可选 true(真), false(假)
-live2d_settings['canSwitchModel']       = true;         // 显示 模型切换    按钮，可选 true(真), false(假)
+live2d_settings['canSwitchModel']       = false;         // 显示 模型切换    按钮，可选 true(真), false(假)
 live2d_settings['canSwitchTextures']    = true;         // 显示 材质切换    按钮，可选 true(真), false(假)
 live2d_settings['canSwitchHitokoto']    = false;         // 显示 一言切换    按钮，可选 true(真), false(假)
 live2d_settings['canTakeScreenshot']    = false;         // 显示 看板娘截图  按钮，可选 true(真), false(假)
@@ -46,14 +46,14 @@ live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件
  /* 可直接修改部分参数 */
     live2d_settings['hitokotoAPI'] = 'jinrishici.com'; // 一言 API
     live2d_settings['modelId'] = 1;                    // 默认模型 ID
-    live2d_settings['modelTexturesId'] = 7;            // 默认材质 ID
+    live2d_settings['modelTexturesId'] = 33;            // 默认材质 ID
     live2d_settings['modelStorage'] = false;           // 不储存模型 ID
     live2d_settings['canCloseLive2d'] = false;         // 隐藏 关闭看板娘 按钮
     live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
     live2d_settings['waifuSize'] = '300x267';          // 看板娘大小，例如 '280x250', '600x535'
     live2d_settings['waifuTipsSize'] = '200x55';       // 提示框大小，例如 '250x70', '570x150'
     live2d_settings['waifuFontSize'] = '15px';         // 提示框字体
-    live2d_settings['waifuEdgeSide'] = 'right:30';     // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+    live2d_settings['waifuEdgeSide'] = 'right:60';     // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
     live2d_settings['waifuToolFont'] = '15px';         // 工具栏字体
     live2d_settings['waifuToolLine'] = '30px';         // 工具栏行高
     live2d_settings['waifuToolTop'] = '-60px';         // 工具栏顶部边距，例如 '0px', '-60px'
@@ -139,7 +139,6 @@ live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件
                 "selector": ".waifu #live2d",
                 "text": [
                     "是…是不小心碰到了吧",
-                    "萝莉控是什么呀",
                     "你看到我的小熊了吗",
                     "再摸的话我可要报警了！⌇●﹏●⌇",
                     "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
