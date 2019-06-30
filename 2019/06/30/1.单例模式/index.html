@@ -145,6 +145,13 @@
   <article class="post-article">
     <section class="markdown-content"><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><pre><code>保证一个类仅有一个实例，并提供一个访问它的全局访问点。
 </code></pre><h5 id="2-主要解决"><a href="#2-主要解决" class="headerlink" title="2.主要解决"></a>2.主要解决</h5><pre><code>一个全局使用的类频繁地创建与销毁。
+</code></pre><h5 id="3-如何解决"><a href="#3-如何解决" class="headerlink" title="3.如何解决"></a>3.如何解决</h5><pre><code>判断系统是否已经有这个单例，如果有则返回，如果没有则创建。
+</code></pre><h5 id="4-优点及缺点"><a href="#4-优点及缺点" class="headerlink" title="4.优点及缺点"></a>4.优点及缺点</h5><h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><pre><code>1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。
+2、避免对资源的多重占用（比如写文件操作）。
+</code></pre><h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><pre><code>1、没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。
+</code></pre><h5 id="5-使用场景"><a href="#5-使用场景" class="headerlink" title="5.使用场景"></a>5.使用场景</h5><pre><code>1、要求生产唯一序列号。
+2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。
+3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。
 </code></pre></section>
     <!-- Tags START -->
     
@@ -206,7 +213,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#单例模式"><span class="toc-nav-text">单例模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-目的"><span class="toc-nav-text">1.目的</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-主要解决"><span class="toc-nav-text">2.主要解决</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#单例模式"><span class="toc-nav-text">单例模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-目的"><span class="toc-nav-text">1.目的</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-主要解决"><span class="toc-nav-text">2.主要解决</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-如何解决"><span class="toc-nav-text">3.如何解决</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4-优点及缺点"><span class="toc-nav-text">4.优点及缺点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#优点"><span class="toc-nav-text">优点</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#缺点"><span class="toc-nav-text">缺点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5-使用场景"><span class="toc-nav-text">5.使用场景</span></a></li></ol></li></ol>
     
   </div>
 </aside>
