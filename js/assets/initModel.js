@@ -46,7 +46,7 @@ live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件
  /* 可直接修改部分参数 */
     live2d_settings['hitokotoAPI'] = 'jinrishici.com'; // 一言 API
     live2d_settings['modelId'] = 1;                    // 默认模型 ID
-    live2d_settings['modelTexturesId'] = 6;            // 默认材质 ID
+    live2d_settings['modelTexturesId'] = 7;            // 默认材质 ID
     live2d_settings['modelStorage'] = false;           // 不储存模型 ID
     live2d_settings['canCloseLive2d'] = false;         // 隐藏 关闭看板娘 按钮
     live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
