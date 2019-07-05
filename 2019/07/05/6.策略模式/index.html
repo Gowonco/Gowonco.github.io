@@ -10,7 +10,7 @@
   
   <title>
     
-      Hello World | Gowonco的博客
+      策略模式 | Gowonco的博客
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,8 +134,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>Hello World</h2>
-  <p class="post-date">2019-02-21</p>
+  <h2>策略模式</h2>
+  <p class="post-date">2019-07-05</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -143,15 +143,20 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info rrrrr: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <section class="markdown-content"><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><pre><code>定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。
+</code></pre><h5 id="2-主要解决"><a href="#2-主要解决" class="headerlink" title="2.主要解决"></a>2.主要解决</h5><pre><code>在有多种算法相似的情况下，使用 if...else 所带来的复杂和难以维护。
+</code></pre><h5 id="3-如何解决"><a href="#3-如何解决" class="headerlink" title="3.如何解决"></a>3.如何解决</h5><p>   将这些算法封装成一个一个的类，任意地替换。</p>
+<h5 id="4-优点及缺点"><a href="#4-优点及缺点" class="headerlink" title="4.优点及缺点"></a>4.优点及缺点</h5><h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><pre><code>1、算法可以自由切换。
+2、避免使用多重条件判断。
+3、扩展性良好。 
+</code></pre><h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><pre><code>1、策略类会增多。
+2、所有策略类都需要对外暴露。
+</code></pre><h5 id="5-使用场景"><a href="#5-使用场景" class="headerlink" title="5.使用场景"></a>5.使用场景</h5><pre><code>1、如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。 
+2、一个系统需要动态地在几种算法中选择一种。
+3、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。
+</code></pre><hr>
+<p><img src="https://github.com/Gowonco/Source/blob/master/images/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.jpg?raw=true" alt="image"></p>
+<h5 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 策略接口</span><br><span class="line"> * @author gowonco</span><br><span class="line"> * @date 2019-07-04 16:28</span><br><span class="line"> */</span><br><span class="line">public interface Strategy &#123;</span><br><span class="line">     int doOperation(int x, int y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 乘法策略</span><br><span class="line"> * @author gowonco</span><br><span class="line"> * @date 2019-07-04 16:33</span><br><span class="line"> */</span><br><span class="line">public class MulpityStrategy implements Strategy &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public int doOperation(int x, int y) &#123;</span><br><span class="line">        return x * y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 加法策略</span><br><span class="line"> * @author gowonco</span><br><span class="line"> * @date 2019-07-04 16:32</span><br><span class="line"> */</span><br><span class="line">public class PlusStrategy implements Strategy &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public int doOperation(int x, int y) &#123;</span><br><span class="line">        return x + y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 操作决策类</span><br><span class="line"> *</span><br><span class="line"> * @author gowonco</span><br><span class="line"> * @date 2019-07-04 16:34</span><br><span class="line"> */</span><br><span class="line">public class Context &#123;</span><br><span class="line">    private Strategy strategy;</span><br><span class="line"></span><br><span class="line">    public Context(Strategy strategy) &#123;</span><br><span class="line">        this.strategy = strategy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Strategy getStrategy() &#123;</span><br><span class="line">        return strategy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setStrategy(Strategy strategy) &#123;</span><br><span class="line">        this.strategy = strategy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int executeStrategy(int x, int y) &#123;</span><br><span class="line">        return strategy.doOperation(x, y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Context context = new Context(new PlusStrategy());</span><br><span class="line">        System.out.println(&quot;5+10=&quot; + context.executeStrategy(5, 10));</span><br><span class="line">        context.setStrategy(new MulpityStrategy());</span><br><span class="line">        System.out.println(&quot;5*10=&quot; + context.executeStrategy(5, 10));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -161,13 +166,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-    
-      <a class="nav-right" href="/2019/06/30/1.单例模式/">
+      <a class="nav-left" href="/2019/07/05/4.适配器模式/">
+        <span class="nav-arrow">← </span>
         
-          单例模式
+          适配器模式
         
-        <span class="nav-arrow"> →</span>
       </a>
+    
     
   </div>
 
@@ -213,7 +218,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Create-a-new-post"><span class="toc-nav-text">Create a new post</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Run-server"><span class="toc-nav-text">Run server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generate-static-files"><span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deploy-to-remote-sites"><span class="toc-nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-目的"><span class="toc-nav-text">1.目的</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-主要解决"><span class="toc-nav-text">2.主要解决</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-如何解决"><span class="toc-nav-text">3.如何解决</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4-优点及缺点"><span class="toc-nav-text">4.优点及缺点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#优点"><span class="toc-nav-text">优点</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#缺点"><span class="toc-nav-text">缺点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5-使用场景"><span class="toc-nav-text">5.使用场景</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#参考代码"><span class="toc-nav-text">参考代码</span></a></li></ol>
     
   </div>
 </aside>
@@ -225,7 +230,7 @@
   <script src="/js/assets/initModel.js"></script>
 <script>
   (function () {
-    var url = 'https://gowonco.github.io/2019/02/21/hello-world/';
+    var url = 'https://gowonco.github.io/2019/07/05/6.策略模式/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -287,7 +292,7 @@
     var gitmentConfig = "yanm1ng";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "Hello World",
+        id: "策略模式",
         owner: "yanm1ng",
         repo: "yanm1ng.github.io",
         oauth: {
